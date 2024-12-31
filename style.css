@@ -7,8 +7,8 @@ body {
 }
 
 .tabs {
-    display: flex;
-    justify-content: center;
+    display: flex;            /* Use flexbox to align items horizontally */
+    justify-content: center;  /* Center the tabs horizontally */
     margin-top: 20px;
 }
 
@@ -21,6 +21,7 @@ body {
     margin: 0 5px;
     font-size: 16px;
     border-radius: 4px;
+    flex: 1;                   /* This allows the buttons to stretch */
 }
 
 .tab-button:hover {
