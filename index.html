@@ -3,32 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eric</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Switch Screens</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .screen {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-
-    <div class="tabs">
-        <button class="tab-button" onclick="showTab('Home')">Tab 1</button>
-        <button class="tab-button" onclick="showTab('tab2')">Tab 2</button>
-        <button class="tab-button" onclick="showTab('tab3')">Tab 3</button>
+    <nav>
+        <button onclick="showScreen('home')">Home</button>
+        <button onclick="showScreen('about')">About Me</button>
+        <button onclick="showScreen('contact')">Contact Me</button>
+    </nav>
+    <div id="home" class="screen active">
+        <h1>Welcome to My Website</h1>
+        <p>This is the Home screen.</p>
     </div>
-
-    <div id="tab1" class="tab-content">
-        <h2>Content for Tab 1</h2>
-        <p>This is the content for the first tab.</p>
+    <div id="about" class="screen">
+        <h1>About Me</h1>
+        <p>This is the About Me screen.</p>
     </div>
-
-    <div id="tab2" class="tab-content">
-        <h2>Content for Tab 2</h2>
-        <p>This is the content for the second tab.</p>
+    <div id="contact" class="screen">
+        <h1>Contact Me</h1>
+        <p>This is the Contact Me screen.</p>
     </div>
-
-    <div id="tab3" class="tab-content">
-        <h2>Content for Tab 3</h2>
-        <p>This is the content for the third tab.</p>
-    </div>
-
-    <script src="script.js"></script>
+    <script>
+        function showScreen(screenId) {
+            const screens = document.querySelectorAll('.screen');
+            screens.forEach(screen => {
+                screen.classList.remove('active');
+            });
+            document.getElementById(screenId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
