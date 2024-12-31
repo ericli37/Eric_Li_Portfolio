@@ -7,8 +7,8 @@ body {
 }
 
 .tabs {
-    display: flex;            /* Use flexbox to align items horizontally */
-    justify-content: center;  /* Center the tabs horizontally */
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: center; /* Center the tabs horizontally */
     margin-top: 20px;
 }
 
@@ -21,7 +21,6 @@ body {
     margin: 0 5px;
     font-size: 16px;
     border-radius: 4px;
-    flex: 1;                   /* This allows the buttons to stretch */
 }
 
 .tab-button:hover {
@@ -29,7 +28,7 @@ body {
 }
 
 .tab-content {
-    display: none;
+    display: none; /* Hide all tab content by default */
     padding: 20px;
     margin: 20px;
     background-color: white;
@@ -38,5 +37,5 @@ body {
 }
 
 .tab-content.active {
-    display: block;
+    display: block; /* Show the active tab content */
 }

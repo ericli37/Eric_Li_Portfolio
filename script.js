@@ -14,5 +14,5 @@ function showTab(tabId) {
 
 // Optionally, set the first tab content to be shown by default
 document.addEventListener("DOMContentLoaded", function() {
-    showTab('tab1'); // Adjust this if you'd like a different default tab to show
+    showTab('tab1'); // This ensures that tab1 is active by default when the page loads
 });
