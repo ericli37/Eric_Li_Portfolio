@@ -1,26 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
     const screen = document.querySelector('.screen');
-    const portfolio = document.querySelector('.portfolio');
 
-    // Step 1: Turn on the screen
+    // Simulate turning on the computer
     setTimeout(() => {
         screen.classList.remove('off');
         screen.classList.add('on');
-    }, 1000); // Delay for 1 second
+    }, 1000); // Turn on after 1 second
 
-    // Step 2: Zoom the screen to full viewport
-    setTimeout(() => {
-        screen.classList.add('zoom');
-    }, 2000); // Delay for 2 seconds to let the "on" effect be visible
-
-    // Step 3: Show portfolio after zoom
+    // Show portfolio after zoom animation
     screen.addEventListener('animationend', () => {
-        portfolio.style.display = 'flex'; // Show the portfolio content
-        document.body.style.overflow = 'auto'; // Enable scrolling if needed
+        screen.classList.remove('on');
+        screen.classList.add('show-content');
     });
 });
 
-// Navigation functionality
+// Portfolio navigation functionality
 function showScreen(screenId) {
     const screens = document.querySelectorAll('.screen-content');
     screens.forEach(screen => {
