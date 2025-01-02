@@ -13,8 +13,8 @@ body {
 /* Computer Frame */
 .computer {
     position: relative;
-    width: 300px;
-    height: 200px;
+    width: 100vw;
+    height: 100vh;
     border: 10px solid #555;
     border-radius: 10px;
     background-color: #111;
@@ -48,7 +48,7 @@ body {
 
 /* Screen turns on */
 .screen.on {
-    background-color: #00ff00;
+    background-color: #ffffff;
     animation: zoomIn 3s ease forwards;
 }
 
