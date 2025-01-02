@@ -2,6 +2,45 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    margin: 0;
+  }
+  
+  .cube {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: rotateCube 5s infinite linear;
+  }
+  
+  .face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #000;
+    text-align: center;
+    line-height: 100px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  .front  { transform: translateZ(50px); }
+  .back   { transform: rotateY(180deg) translateZ(50px); }
+  .left   { transform: rotateY(-90deg) translateZ(50px); }
+  .right  { transform: rotateY(90deg) translateZ(50px); }
+  .top    { transform: rotateX(90deg) translateZ(50px); }
+  .bottom { transform: rotateX(-90deg) translateZ(50px); }
+  
+  @keyframes rotateCube {
+    0% { transform: rotateX(0) rotateY(0); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
 }
 
 nav {
@@ -34,3 +73,5 @@ nav button:hover {
 .screen.active {
     display: block;
 }
+
+
