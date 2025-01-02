@@ -3,38 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eric Li's Portfolio</title>
+    <title>Simple Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Computer -->
-    <div class="computer">
-        <div class="screen off">
-            <div class="portfolio">
-                <nav>
-                    <button onclick="showScreen('home')">Home</button>
-                    <button onclick="showScreen('about')">About Me</button>
-                    <button onclick="showScreen('projects')">Projects</button>
-                    <button onclick="showScreen('contact')">Contact Me</button>
-                </nav>
-                <div id="home" class="screen-content active">
-                    <h1>Welcome to My Website</h1>
-                    <p>This is the Home screen.</p>
-                </div>
-                <div id="about" class="screen-content">
-                    <h1>About Me</h1>
-                    <p>This is the About Me screen.</p>
-                </div>
-                <div id="projects" class="screen-content">
-                    <h1>Projects</h1>
-                    <p>This is my Projects screen.</p>
-                </div>
-                <div id="contact" class="screen-content">
-                    <h1>Contact Me</h1>
-                    <p>This is the Contact Me screen.</p>
-                </div>
-            </div>
-        </div>
+    <nav>
+        <button onclick="switchScreen('home')">Home</button>
+        <button onclick="switchScreen('about')">About Me</button>
+        <button onclick="switchScreen('projects')">Projects</button>
+        <button onclick="switchScreen('contact')">Contact Me</button>
+    </nav>
+    <div id="content">
+        <div id="home" class="screen active">Welcome to the Home Page!</div>
+        <div id="about" class="screen">This is the About Me Page.</div>
+        <div id="projects" class="screen">Here are some Projects.</div>
+        <div id="contact" class="screen">Get in touch on the Contact Page.</div>
     </div>
     <script src="script.js"></script>
 </body>
