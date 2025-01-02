@@ -11,6 +11,15 @@ nav {
     gap: 10px;
 }
 
+a img {
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+a img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
 nav button {
     background-color: #555;
     color: white;
