@@ -1,55 +1,53 @@
-body, html {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    transition: background 0.5s ease;
+    background-color: #f4f4f4;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
+    background-color: #333;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+/* Ensure images are responsive and fit within their container */
+.image-gallery img {
+    width: 100%;        /* Ensure the image stretches to fill its container */
+    max-width: 50px;   /* Limit the width to a maximum of 300px */
+    height: auto;       /* Maintain the aspect ratio */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect */
+.image-gallery img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 nav button {
-    margin: 0 10px;
-    padding: 10px 20px;
+    background-color: #555;
+    color: white;
     border: none;
-    background-color: #fff;
-    color: #333;
-    font-size: 1em;
+    padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
 }
 
 nav button:hover {
-    background-color: #ddd;
+    background-color: #777;
+}
+
+#content {
+    padding: 20px;
 }
 
 .screen {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .screen.active {
-    display: flex;
+    display: block;
 }
 
-.section {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2em;
-    color: white;
-    text-align: center;
-    transition: background 0.5s ease;
-}
+
