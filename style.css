@@ -12,6 +12,18 @@ nav {
     gap: 10px;
 }
 
+/* Background for "I am Eric" section */
+#intro {
+    background: linear-gradient(to bottom, #1e3c72, #2a5298); /* Blue gradient */
+    position: relative;
+}
+
+/* Gradient background for the "Contact me" section */
+#contact {
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b); /* Warm gradient */
+    position: relative;
+}
+
 /* Ensure images are responsive and fit within their container */
 .image-gallery img {
     width: 100%;        /* Ensure the image stretches to fill its container */
